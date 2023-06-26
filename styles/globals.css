@@ -14,7 +14,7 @@
   position: fixed;
   display: flex;
   justify-content: center;
-  padding: 40px 14px 250px 14px;
+  padding: 120px 24px 160px 24px;
   pointer-events: none;
 }
 
@@ -86,7 +86,7 @@
 }
 
 .head_text {
-  @apply mt-5 text-5xl font-extrabold leading-[1.15] text-black sm:text-5xl;
+  @apply mt-5 text-5xl font-extrabold leading-[1.15] text-black sm:text-6xl;
 }
 
 .orange_gradient {
