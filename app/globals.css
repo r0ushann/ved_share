@@ -30,7 +30,6 @@
 
 .main:after {
   content: "";
-  background-image: url("/assets/images/grid.svg");
   z-index: 1;
   position: absolute;
   width: 100%;
@@ -86,7 +85,7 @@
 }
 
 .head_text {
-  @apply mt-5 text-5xl font-extrabold leading-[1.15] text-black sm:text-5xl;
+  @apply mt-5 text-2xl font-extrabold leading-[1.15] text-black sm:text-2xl;
 }
 
 .orange_gradient {
