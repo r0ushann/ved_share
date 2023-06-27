@@ -7,8 +7,7 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
         <span className='blue_gradient'>{type} Post</span>
       </h1>
       <p className='desc text-left max-w-md'>
-        {type} and share amazing prompts with the world, and let your
-        imagination run wild with any AI-powered platform
+        {type} and share your thoughts with the world!
       </p>
 
       <form
@@ -17,7 +16,7 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
       >
         <label>
           <span className='font-satoshi font-semibold text-base text-gray-700'>
-            Your AI Prompt
+            Your sharing thoughts or experiences...
           </span>
 
           <textarea
@@ -32,7 +31,7 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
         <label>
           <span className='font-satoshi font-semibold text-base text-gray-700'>
             Field of Prompt{" "}
-            <span className='font-normal'>
+            <span className='font-normal text-sm'>
               (#product, #webdevelopment, #idea, etc.)
             </span>
           </span>
