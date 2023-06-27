@@ -10,6 +10,7 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
         {type} and share your thoughts, experience and knowledge with the vedanta world!
       </p>
 
+      {/**form code  below*/}
       <form
         onSubmit={handleSubmit}
         className='mt-10 w-full max-w-2xl flex flex-col gap-7 glassmorphism'
@@ -46,10 +47,13 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
         </label>
 
         <div className='flex-end mx-3 mb-5 gap-4'>
+        {/** cancel button */}
           <Link href='/' className='text-gray-500 text-sm'>
             Cancel
           </Link>
 
+
+          {/** submit button */}
           <button
             type='submit'
             disabled={submitting}

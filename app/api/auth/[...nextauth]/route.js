@@ -22,7 +22,7 @@ const handler = NextAuth({
         session.user.id = sessionUser._id.toString();
         return session;
     },
-
+//signin to db
     async signIn({profile}){
         try{
             await connectToDB();
@@ -45,6 +45,10 @@ const handler = NextAuth({
             return false;
         }
     }
+
+    //sign in to db code ends here
+
+
    }
 })
 
