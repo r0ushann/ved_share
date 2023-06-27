@@ -20,11 +20,11 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
     router.push(`/profile/${post.creator._id}?name=${post.creator.username}`);
   };
 
-  const handleCopy = () => {
-    setCopied(post.prompt);
-    navigator.clipboard.writeText(post.prompt);
-    setTimeout(() => setCopied(false), 3000);
-  };
+  // const handleCopy = () => {
+  //   setCopied(post.prompt);
+  //   navigator.clipboard.writeText(post.prompt);
+  //   setTimeout(() => setCopied(false), 3000);
+  // };
 
   return (
     <div className='prompt_card'>
@@ -42,7 +42,7 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
           />
 
           <div className='flex flex-col'>
-            <h3 className='font-satoshi font-semibold text-gray-900'>
+            <h3 className='font-satoshi font-semibold orange_gradient'>
               {post.creator.username}
             </h3>
             <p className='font-inter text-sm text-gray-500'>
@@ -52,7 +52,7 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
         </div>
 
         <div className='copy_btn' onClick={handleCopy}>
-          <Image
+         { /*<Image
             src={
               copied === post.prompt
                 ? "/assets/icons/tick.svg"
@@ -61,13 +61,13 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
             alt={copied === post.prompt ? "tick_icon" : "copy_icon"}
             width={12}
             height={12}
-          />
+          />*/}
         </div>
       </div>
 
       <p className='my-4 font-satoshi text-sm text-gray-700'>{post.prompt}</p>
       <p
-        className='font-inter text-sm blue_gradient cursor-pointer'
+        className='font-inter text-sm text-purple-500 cursor-pointer'
         onClick={() => handleTagClick && handleTagClick(post.tag)}
       >
         #{post.tag}
