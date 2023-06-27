@@ -22,11 +22,29 @@ const Feed = () => {
 
   const [searchText, setSearchText] = useState('');
   const [posts, setPosts] = useState([]);
+  const [searchTimeout, setSearchTimeout] = useState(null);
+  const [searchedResults, setSearchedResults] = useState([]);
 
   //handleSearchChange function for searching 
-  const handleSearchChange = (e)=> {
+  const handleSearchChange = (e) => {
+    clearTimeout(searchTimeout);
+    setSearchText(e.target.value);
 
-  }
+    // debounce method
+    setSearchTimeout(
+      setTimeout(() => {
+        const searchResult = filterPrompts(e.target.value);
+        setSearchedResults(searchResult);
+      }, 500)
+    );
+  };
+
+  const handleTagClick = (tagName) => {
+    setSearchText(tagName);
+
+    const searchResult = filterPrompts(tagName);
+    setSearchedResults(searchResult);
+  };
 
   useEffect(() => {
 
@@ -56,10 +74,15 @@ const Feed = () => {
       </form>
 
       {/** displaying/rendering posts */}
-      <PromptCardList 
-      data={posts}
-      handleTagClick={() =>{}}
-      />
+       {/* All Prompts */}
+       {searchText ? (
+        <PromptCardList
+          data={searchedResults}
+          handleTagClick={handleTagClick}
+        />
+      ) : (
+        <PromptCardList data={allPosts} handleTagClick={handleTagClick} />
+      )}
     </section>
     )
 }
