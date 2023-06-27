@@ -7,23 +7,23 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
         <span className='blue_gradient'>{type} Post</span>
       </h1>
       <p className='desc text-left max-w-md'>
-        {type} and share your thoughts, experience and knowledge with the vedanta world!
+        {type} and share amazing prompts with the world, and let your
+        imagination run wild with any AI-powered platform
       </p>
 
-      {/**form code  below*/}
       <form
         onSubmit={handleSubmit}
         className='mt-10 w-full max-w-2xl flex flex-col gap-7 glassmorphism'
       >
         <label>
           <span className='font-satoshi font-semibold text-base text-gray-700'>
-            Your Inspirational Prompt
+            Your AI Prompt
           </span>
 
           <textarea
             value={post.prompt}
             onChange={(e) => setPost({ ...post, prompt: e.target.value })}
-            placeholder='write here to share your post...'
+            placeholder='Write your post here'
             required
             className='form_textarea '
           />
@@ -32,8 +32,8 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
         <label>
           <span className='font-satoshi font-semibold text-base text-gray-700'>
             Field of Prompt{" "}
-            <span className='text-sm'>
-              (#product, #oppurtunities, #innovations, #machines, #ideas, etc.)
+            <span className='font-normal'>
+              (#product, #webdevelopment, #idea, etc.)
             </span>
           </span>
           <input
@@ -47,13 +47,10 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
         </label>
 
         <div className='flex-end mx-3 mb-5 gap-4'>
-        {/** cancel button */}
           <Link href='/' className='text-gray-500 text-sm'>
             Cancel
           </Link>
 
-
-          {/** submit button */}
           <button
             type='submit'
             disabled={submitting}
