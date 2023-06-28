@@ -30,7 +30,7 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
 
         <label>
           <span className='font-satoshi font-semibold text-base text-gray-700'>
-            Field of Prompt{" "}
+            Tag of your Post{" "}
             <span className='font-normal text-sm'>
               (#product, #webdevelopment, #idea, etc.)
             </span>
