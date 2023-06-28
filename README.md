@@ -2,7 +2,7 @@
 
 ## VEDANTA SHARE
 An open thoughts like post sharing web app, give it a try!
-###login is handled by google accounts.
+### login is handled by google accounts.
 
 ## Deploy on Vercel
 
