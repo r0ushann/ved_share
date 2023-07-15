@@ -1,7 +1,7 @@
 
 
 ## VEDANTA SHARE
-An open thoughts like post sharing web app, give it a try!
+An open thoughts sharing web app, give it a try!
 ### login is handled by google accounts.
 [View the app](https://ved-share-git-main-r0ushann.vercel.app/)
 
